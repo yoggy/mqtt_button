@@ -1,5 +1,5 @@
 //
-// mqtt_button.ino - Publish states of buttons using MQTT protocol. 
+// mqtt_button.ino - Publish states of buttons using MQTT protocol.
 //
 // https://github.com/yoggy/mqtt_button
 //
@@ -40,6 +40,7 @@ void setup() {
 
   Serial.begin(9600);
 
+  WiFi.mode(WIFI_STA);
   WiFi.begin(wifi_ssid, wifi_password);
   int wifi_count = 0;
   while (WiFi.status() != WL_CONNECTED) {
